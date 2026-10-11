@@ -1,0 +1,16 @@
+{
+  "name": "timecode-cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Terminal LTC and MTC reader (example for timecode-tools)",
+  "license": "MIT",
+  "bin": {
+    "timecode-cli": "index.js"
+  },
+  "dependencies": {
+    "timecode-tools": "file:../.."
+  },
+  "optionalDependencies": {
+    "@julusian/midi": "3.8.1"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "name": "timecode-tools",
+  "version": "0.1.0",
+  "description": "SMPTE LTC and MIDI Time Code (MTC) readers for Node.js: stream in PCM or MIDI bytes, get timecode, lock, loss and jump events. Rust core, prebuilt binaries.",
+  "keywords": [
+    "timecode",
+    "smpte",
+    "ltc",
+    "linear-timecode",
+    "mtc",
+    "midi",
+    "midi-timecode",
+    "audio",
+    "decoder",
+    "companion",
+    "show-control"
+  ],
+  "license": "MIT",
+  "author": "Takashi Funama <support@showbuildlabs.com>",
+  "homepage": "https://github.com/ShowBuildLaboratories/timecode-tools-node#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShowBuildLaboratories/timecode-tools-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShowBuildLaboratories/timecode-tools-node/issues"
+  },
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "native.js",
+    "prebuilds/*.node",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "napi": {
+    "binaryName": "timecode-tools",
+    "targets": [
+      "aarch64-apple-darwin",
+      "x86_64-apple-darwin",
+      "x86_64-pc-windows-msvc",
+      "aarch64-pc-windows-msvc",
+      "x86_64-unknown-linux-gnu",
+      "aarch64-unknown-linux-gnu",
+      "armv7-unknown-linux-gnueabihf",
+      "x86_64-unknown-linux-musl",
+      "aarch64-unknown-linux-musl"
+    ]
+  },
+  "scripts": {
+    "build": "napi build --platform --release --output-dir prebuilds --no-js --dts ../native.d.ts",
+    "build:debug": "napi build --platform --output-dir prebuilds --no-js --dts ../native.d.ts",
+    "test": "node --test __test__/*.test.js",
+    "typecheck": "tsc --noEmit -p __test__/tsconfig.json",
+    "goldens:sync": "node scripts/goldens.js sync",
+    "goldens:check": "node scripts/goldens.js check",
+    "check:prebuilds": "node scripts/check-prebuilds.js"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "3.10.5",
+    "@types/node": "^22.18.0",
+    "typescript": "^5.9.3"
+  }
+}

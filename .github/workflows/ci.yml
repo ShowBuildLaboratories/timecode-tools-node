@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+  # Git ref of https://github.com/ShowBuildLaboratories/timecode-tools-rs to
+  # build against while the crate is used by path (see CONTRIBUTING.md).
+  CORE_REF: main
+
+jobs:
+  node:
+    name: Node ${{ matrix.node }} (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        node: [18, 22, 24]
+    defaults:
+      run:
+        working-directory: timecode-tools-node
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: timecode-tools-node
+      - uses: actions/checkout@v4
+        with:
+          repository: ShowBuildLaboratories/timecode-tools-rs
+          ref: ${{ env.CORE_REF }}
+          path: timecode-tools-rs
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: timecode-tools-node
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - run: npm run goldens:check -- --require-core
+      - run: npm run typecheck
+        if: matrix.node == 22
+      - run: npm pack --dry-run
+        if: matrix.node == 22

@@ -1,0 +1,1068 @@
+{
+  "name": "ltc_24_stereo_channel2_fixed_rate",
+  "description": "24 fps on channel 2 of a stereo stream (channel 1 carries a ramp), frame rate fixed, offset -3.",
+  "kind": "ltc",
+  "input": {
+    "sample_rate": 44100,
+    "rate": "24",
+    "channels": 2,
+    "ltc_channel": 2,
+    "chunk": 441,
+    "t0_us": 100000000,
+    "segments": [
+      {
+        "start": "10:00:00:00",
+        "frame_count": 48
+      }
+    ],
+    "sample_count": 177136
+  },
+  "options": {
+    "frame_rate": "24",
+    "channel": 2,
+    "offset_frames": -3
+  },
+  "steps": [
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:00",
+          "ts_us": 100129195
+        }
+      ],
+      "events": [
+        "lock"
+      ]
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:01",
+          "ts_us": 100170850
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:02",
+          "ts_us": 100212528
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:03",
+          "ts_us": 100254183
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:04",
+          "ts_us": 100295861
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:05",
+          "ts_us": 100337517
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:06",
+          "ts_us": 100379195
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:07",
+          "ts_us": 100420850
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:08",
+          "ts_us": 100462528
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:09",
+          "ts_us": 100504183
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:10",
+          "ts_us": 100545861
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:11",
+          "ts_us": 100587517
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:12",
+          "ts_us": 100629195
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:13",
+          "ts_us": 100670850
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:14",
+          "ts_us": 100712528
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:15",
+          "ts_us": 100754183
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:16",
+          "ts_us": 100795861
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:17",
+          "ts_us": 100837517
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:18",
+          "ts_us": 100879195
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:19",
+          "ts_us": 100920850
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:20",
+          "ts_us": 100962528
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:21",
+          "ts_us": 101004183
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:22",
+          "ts_us": 101045861
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:00:23",
+          "ts_us": 101087517
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:00",
+          "ts_us": 101129195
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:01",
+          "ts_us": 101170850
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:02",
+          "ts_us": 101212528
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:03",
+          "ts_us": 101254183
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:04",
+          "ts_us": 101295861
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:05",
+          "ts_us": 101337517
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:06",
+          "ts_us": 101379195
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:07",
+          "ts_us": 101420850
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:08",
+          "ts_us": 101462528
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:09",
+          "ts_us": 101504183
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:10",
+          "ts_us": 101545861
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:11",
+          "ts_us": 101587517
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:12",
+          "ts_us": 101629195
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:13",
+          "ts_us": 101670850
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:14",
+          "ts_us": 101712528
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:15",
+          "ts_us": 101754183
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:16",
+          "ts_us": 101795861
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:17",
+          "ts_us": 101837517
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:18",
+          "ts_us": 101879195
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:19",
+          "ts_us": 101920850
+        }
+      ],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [],
+      "events": []
+    },
+    {
+      "frames": [
+        {
+          "tc": "10:00:01:20",
+          "ts_us": 101962528
+        }
+      ],
+      "events": []
+    }
+  ],
+  "wait_for": {
+    "10:00:01:00": {
+      "chunk": 117,
+      "tc": "10:00:01:00",
+      "ts_us": 101129195
+    }
+  },
+  "final_locked": true,
+  "final_detected_rate": "24",
+  "final_current": "10:00:01:20"
+}
