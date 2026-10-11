@@ -27,10 +27,6 @@ permissions:
 
 env:
   CARGO_TERM_COLOR: always
-  # Git ref of https://github.com/ShowBuildLaboratories/timecode-tools-rs to
-  # build against while the crate is used by path. Not needed once
-  # Cargo.toml uses the crates.io release (see CONTRIBUTING.md).
-  CORE_REF: main
 
 jobs:
   build:
@@ -62,11 +58,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           path: timecode-tools-node
-      - uses: actions/checkout@v4
-        with:
-          repository: ShowBuildLaboratories/timecode-tools-rs
-          ref: ${{ env.CORE_REF }}
-          path: timecode-tools-rs
       - uses: dtolnay/rust-toolchain@stable
         with:
           targets: ${{ matrix.target }}

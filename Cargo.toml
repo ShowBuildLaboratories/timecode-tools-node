@@ -20,12 +20,10 @@ test = false
 doctest = false
 
 [dependencies]
-# The Rust core lives in https://github.com/ShowBuildLaboratories/timecode-tools-rs.
-# Until it is on crates.io, it is used from a checkout next to this one
-# (../timecode-tools-rs). For a release this becomes
-#   timecode-tools = "=0.1.0"
-# See CONTRIBUTING.md.
-timecode-tools = { path = "../timecode-tools-rs/crates/timecode-tools", version = "=0.1.0" }
+# The Rust core (https://github.com/ShowBuildLaboratories/timecode-tools-rs),
+# pinned to the exact release. See CONTRIBUTING.md for trying unreleased
+# core changes.
+timecode-tools = "=0.1.0"
 napi = { version = "=3.13.0", default-features = false, features = ["napi4"] }
 napi-derive = "=3.6.9"
 

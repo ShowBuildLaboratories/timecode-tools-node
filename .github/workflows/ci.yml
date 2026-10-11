@@ -10,9 +10,9 @@ permissions:
 
 env:
   CARGO_TERM_COLOR: always
-  # Git ref of https://github.com/ShowBuildLaboratories/timecode-tools-rs to
-  # build against while the crate is used by path (see CONTRIBUTING.md).
-  CORE_REF: main
+  # Release tag of https://github.com/ShowBuildLaboratories/timecode-tools-rs
+  # matching the crate version in Cargo.toml. Its goldens/ must equal ours.
+  CORE_REF: v0.1.0
 
 jobs:
   node:

@@ -10,8 +10,10 @@ which lives in its own repository together with the shared golden files.
 You need Rust (1.88 or later) and Node.js 20 or later to build (the
 package itself runs on Node.js 18 or later).
 
-While the Rust crate is not yet on crates.io, `Cargo.toml` uses it from a
-checkout of the core repository **next to this one**:
+`Cargo.toml` uses the published crate, pinned to the exact version
+(`timecode-tools = "=0.1.0"`). To also compare `goldens/` with the core,
+check out the core repository **next to this one**, at the release tag
+that matches that version:
 
 ```text
 some-folder/
@@ -20,7 +22,7 @@ some-folder/
 ```
 
 ```sh
-git clone https://github.com/ShowBuildLaboratories/timecode-tools-rs
+git clone --branch v0.1.0 https://github.com/ShowBuildLaboratories/timecode-tools-rs
 git clone https://github.com/ShowBuildLaboratories/timecode-tools-node
 cd timecode-tools-node
 npm ci
@@ -51,37 +53,22 @@ final state.
 Set `TIMECODE_TOOLS_RS_DIR` if the core checkout is somewhere other than
 `../timecode-tools-rs`. Do not edit files in `goldens/` by hand.
 
-## Switching the core to crates.io
+## Updating the core
 
-Once `timecode-tools` 0.1.0 is published on crates.io, release builds use
-the published crate, pinned to the exact version:
+For a new core release `X.Y.Z` (on crates.io, tagged `vX.Y.Z` in the core
+repository):
 
-1. In `Cargo.toml`, replace the dependency line
+1. In `Cargo.toml`, change `timecode-tools = "=0.1.0"` to `"=X.Y.Z"` and
+   run `cargo update -p timecode-tools`.
+2. Check out the core at `vX.Y.Z` next to this repository and run
+   `npm run goldens:sync`.
+3. Set `CORE_REF: vX.Y.Z` in `.github/workflows/ci.yml` (CI compares
+   `goldens/` with that tag).
+4. `npm run build && npm test`, then commit `Cargo.toml`, `Cargo.lock`,
+   `goldens/` and the workflow.
 
-   ```toml
-   timecode-tools = { path = "../timecode-tools-rs/crates/timecode-tools", version = "=0.1.0" }
-   ```
-
-   with
-
-   ```toml
-   timecode-tools = "=0.1.0"
-   ```
-
-2. Run `cargo update -p timecode-tools` and `npm run build && npm test`.
-   Commit `Cargo.toml` and `Cargo.lock`.
-3. In `.github/workflows/ci.yml` and `release.yml`, the second checkout
-   (`repository: ShowBuildLaboratories/timecode-tools-rs`) and `CORE_REF`
-   are then needed only for `goldens:check`. In `release.yml` remove that
-   checkout from the build job. In `ci.yml` keep it, and set `CORE_REF` to
-   the core's release tag (for example `v0.1.0`) so the goldens are checked
-   against the released version.
-
-For later core releases, change `=0.1.0` to the new exact version and run
-`npm run goldens:sync` against the matching core tag.
-
-To try unreleased core changes locally after the switch, add a `[patch]`
-section to `.cargo/config.toml` (not committed):
+To try unreleased core changes locally, add a `[patch]` section to
+`.cargo/config.toml` (not committed):
 
 ```toml
 [patch.crates-io]
