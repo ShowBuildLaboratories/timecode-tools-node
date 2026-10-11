@@ -55,6 +55,9 @@ jobs:
       run:
         working-directory: timecode-tools-node
     steps:
+      # Keep files byte for byte (goldens/ is compared with the core's copy).
+      - run: git config --global core.autocrlf false
+        if: runner.os == 'Windows'
       - uses: actions/checkout@v4
         with:
           path: timecode-tools-node
@@ -104,6 +107,9 @@ jobs:
           # armv7 and arm64 musl are built but not run on hardware here.
     container: ${{ matrix.container }}
     steps:
+      # Keep files byte for byte (goldens/ is compared with the core's copy).
+      - run: git config --global core.autocrlf false
+        if: runner.os == 'Windows'
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         if: ${{ !matrix.container }}
@@ -121,6 +127,9 @@ jobs:
     needs: [build, test]
     runs-on: ubuntu-latest
     steps:
+      # Keep files byte for byte (goldens/ is compared with the core's copy).
+      - run: git config --global core.autocrlf false
+        if: runner.os == 'Windows'
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:

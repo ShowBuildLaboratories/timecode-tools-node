@@ -69,7 +69,8 @@ test('attach a Readable, waitFor a timecode, detach', async () => {
   const rx = new LtcReceiver({ frameRate: FrameRate.Auto })
   const log = record(rx)
   const passed = rx.waitFor('00:01:00;02')
-  const never = rx.waitFor('10:00:00:00', { signal: AbortSignal.timeout(2000) })
+  const abort = new AbortController()
+  const never = rx.waitFor('10:00:00:00', { signal: abort.signal })
   const ended = new Promise((resolve) => rx.once('end', resolve))
   rx.attach(Readable.from(chunks(pcm)))
   const tc = await passed
@@ -78,6 +79,7 @@ test('attach a Readable, waitFor a timecode, detach', async () => {
   assert.ok(tc.timestamp > 1000)
   await ended
   assert.deepEqual(log, ['lock 00:00:58;03 29.97df', 'lost'])
+  abort.abort()
   await assert.rejects(never)
   rx.detach()
 })
@@ -123,7 +125,11 @@ test('loss is reported when chunks stop arriving', async () => {
   const rx = new LtcReceiver()
   for (const c of chunks(pcm)) rx._push(c)
   assert.equal(rx.locked, true)
+  // The receiver's loss timer is unref'd (it never keeps a program alive),
+  // so hold the event loop open while waiting for it.
+  const keepAlive = setTimeout(() => {}, 5000)
   await new Promise((resolve) => rx.once('lost', resolve))
+  clearTimeout(keepAlive)
   assert.equal(rx.locked, false)
 })
 

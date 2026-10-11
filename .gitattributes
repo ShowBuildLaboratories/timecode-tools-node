@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.node binary
+# Compared byte for byte with the core repository.
+goldens/** -text
