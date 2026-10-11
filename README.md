@@ -137,6 +137,7 @@ follow(new MtcReceiver())
 | `frames()` / `events()` | Async iterators of frames and of `lock` / `lost` / `jump` / `end` (throws if the input fails) |
 | `on` / `off` / `addEventListener` / `removeEventListener` | Events `frame`, `lock`, `lost`, `jump` |
 | `waitFor(timecode)` | Resolves when playback passes the timecode |
+| `positionAt(timestamp)` / `framesAt(timestamp)` | The timecode (or fractional frame count) at any instant, from a fit of the recent signal |
 | `frameRate` / `detectedRate` | The configured rate / the rate in use |
 | `offsetFrames` | Latency compensation; can be changed while running |
 | `lostAfter` | ms without a frame before `lost` (option, default 300) |
@@ -217,6 +218,23 @@ Resolves with the first `Timecode` at or past `target` that directly
 continues a frame before it, i.e. when normal playback passes the target
 (also across midnight). A jump over or onto the target does not count.
 Rejects if the receiver is closed first.
+
+### `positionAt(timestamp)` and `framesAt(timestamp)`
+
+The timecode at any instant, not only when a frame arrives: `timestamp` is
+in ms on the same monotonic clock as the chunk timestamps (for example
+`performance.now()`). The receiver fits a line through the recent frames
+and interpolates or extrapolates, so the result is free of the jitter of
+your callbacks. `offsetFrames` is applied.
+
+```js
+const now = performance.now()
+rx.positionAt(now) // Timecode (its timestamp is `now`), or null
+rx.framesAt(now)   // e.g. 90048.37: frames since 00:00:00:00, not wrapped at midnight
+```
+
+Both return `null` until the signal has been locked long enough to fit,
+after it is lost, and after `close()`.
 
 ## Frame rates
 

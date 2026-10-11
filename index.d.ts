@@ -194,6 +194,18 @@ export interface TimecodeReceiver<Chunk = unknown> extends EventEmitter<Receiver
    * target does not count. Rejects if the receiver is closed first.
    */
   waitFor(target: string | Timecode, options?: { signal?: AbortSignal }): Promise<Timecode>
+  /**
+   * The timecode at `timestamp` (ms, the same monotonic clock as the chunk
+   * timestamps), interpolated or extrapolated from the recent signal, with
+   * `offsetFrames` applied. null until the signal has been locked long
+   * enough to fit a clock, after it is lost, or after `close()`.
+   */
+  positionAt(timestamp: number): Timecode | null
+  /**
+   * `positionAt()` as a fractional frame count since 00:00:00:00 (not
+   * wrapped at midnight).
+   */
+  framesAt(timestamp: number): number | null
   /** The configured frame rate. */
   readonly frameRate: FrameRate
   /** The rate in use (configured or detected); null until known. */
@@ -235,6 +247,8 @@ export declare class LtcReceiver extends EventEmitter<ReceiverEvents> implements
   ): void
   removeEventListener<K extends keyof ReceiverEventDetails>(type: K, listener: Listener<K> | null): void
   waitFor(target: string | Timecode, options?: { signal?: AbortSignal }): Promise<Timecode>
+  positionAt(timestamp: number): Timecode | null
+  framesAt(timestamp: number): number | null
   readonly frameRate: FrameRate
   readonly detectedRate: FixedFrameRate | null
   offsetFrames: number
@@ -265,6 +279,8 @@ export declare class MtcReceiver extends EventEmitter<ReceiverEvents> implements
   ): void
   removeEventListener<K extends keyof ReceiverEventDetails>(type: K, listener: Listener<K> | null): void
   waitFor(target: string | Timecode, options?: { signal?: AbortSignal }): Promise<Timecode>
+  positionAt(timestamp: number): Timecode | null
+  framesAt(timestamp: number): number | null
   readonly frameRate: FrameRate
   readonly detectedRate: FixedFrameRate | null
   offsetFrames: number

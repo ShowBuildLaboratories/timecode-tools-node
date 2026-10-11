@@ -1,8 +1,9 @@
 'use strict'
 // Replays the shared receiver golden files (goldens/, copied from the Rust
 // core repository) through the public Node API: the same frames (timecode,
-// and timestamp within 3 us), the same lock / lost / jump events after each
-// input chunk, the same waitFor() results and the same final state.
+// and timestamp within 3 us), the same lock / lost / jump events and
+// framesAt() value (within 1e-6 frames) after each input chunk, the same
+// waitFor() results and the same final state.
 const test = require('node:test')
 const assert = require('node:assert/strict')
 const fs = require('node:fs')
@@ -150,9 +151,12 @@ for (const golden of cases) {
     const ended = new Promise((resolve) => rx.once('end', resolve))
     rx.attach(
       (async function* () {
-        for (const chunk of chunks) {
+        for (const [i, chunk] of chunks.entries()) {
           steps.push({ frames: [], events: [] })
           yield chunk
+          // Back here once the chunk has been processed.
+          const at = golden.steps[i]?.frames_at
+          if (at) steps.at(-1).framesAt = rx.framesAt(at.t_us / 1000)
         }
         // State after the last chunk, before end-of-input reports 'lost'.
         final = { locked: rx.locked, detectedRate: rx.detectedRate, current: rx.current ? String(rx.current) : null }
@@ -169,6 +173,12 @@ for (const golden of cases) {
     golden.steps.forEach((want, i) => {
       const got = steps[i]
       assert.deepEqual(got.events, want.events, `${name} chunk ${i}: events`)
+      if (want.frames_at) {
+        const w = want.frames_at.value
+        const g = got.framesAt
+        if (w === null) assert.equal(g, null, `${name} chunk ${i}: framesAt`)
+        else assert.ok(g != null && Math.abs(g - w) < 1e-6, `${name} chunk ${i}: framesAt ${g} vs ${w}`)
+      }
       assert.equal(got.frames.length, want.frames.length, `${name} chunk ${i}: frame count`)
       got.frames.forEach((tc, k) => {
         assert.equal(String(tc), want.frames[k].tc, `${name} chunk ${i}`)

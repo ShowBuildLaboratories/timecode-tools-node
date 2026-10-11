@@ -505,6 +505,31 @@ class TimecodeReceiver extends EventEmitter {
     })
   }
 
+  /**
+   * The timecode at `timestamp` (ms, the same monotonic clock as the chunk
+   * timestamps), interpolated or extrapolated from the recent signal, with
+   * offsetFrames applied. null until the signal has been locked long enough
+   * to fit a clock, after it is lost, or after close().
+   */
+  positionAt(timestamp) {
+    const frames = this.framesAt(timestamp)
+    const rate = this.detectedRate
+    if (frames == null || rate == null) return null
+    return new Timecode({ ...Timecode.fromFrameIndex(Math.floor(frames), rate), timestamp })
+  }
+
+  /**
+   * positionAt() as a fractional frame count since 00:00:00:00 (not wrapped
+   * at midnight).
+   */
+  framesAt(timestamp) {
+    if (!(Number.isFinite(timestamp) && timestamp >= 0)) {
+      throw new TypeError('timestamp must be a non-negative number of milliseconds')
+    }
+    if (this._closed) return null
+    return this._native.framesAt(timestamp) ?? null
+  }
+
   _checkOpen() {
     if (this._closed) throw new Error('receiver is closed')
   }

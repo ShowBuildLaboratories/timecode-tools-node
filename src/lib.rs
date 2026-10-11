@@ -289,6 +289,12 @@ impl NativeLtcReceiver {
     pub fn set_offset_frames(&mut self, frames: i64) {
         self.inner.set_offset_frames(frames);
     }
+    /// Fractional frame count since 00:00:00:00 at `timestamp` (ms, the
+    /// chunk timestamp clock), offset applied; `null` until fitted.
+    #[napi]
+    pub fn frames_at(&self, timestamp: f64) -> Result<Option<f64>> {
+        Ok(ms_to_ns(Some(timestamp))?.and_then(|ns| self.inner.frames_at(ns)))
+    }
 }
 
 impl NativeLtcReceiver {
@@ -365,6 +371,12 @@ impl NativeMtcReceiver {
     #[napi(setter)]
     pub fn set_offset_frames(&mut self, frames: i64) {
         self.inner.set_offset_frames(frames);
+    }
+    /// Fractional frame count since 00:00:00:00 at `timestamp` (ms, the
+    /// chunk timestamp clock), offset applied; `null` until fitted.
+    #[napi]
+    pub fn frames_at(&self, timestamp: f64) -> Result<Option<f64>> {
+        Ok(ms_to_ns(Some(timestamp))?.and_then(|ns| self.inner.frames_at(ns)))
     }
 }
 

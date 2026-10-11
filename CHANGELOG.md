@@ -13,8 +13,9 @@ First public release.
   `TimecodeReceiver` interface: `attach` / `detach` / `close`, events
   `frame`, `lock`, `lost` and `jump` through EventEmitter,
   `addEventListener` or async iterators (`frames()`, `events()`),
-  `waitFor(timecode)`, `frameRate`, `detectedRate`, `offsetFrames`,
-  `lostAfter`, `closed`; `end` and `error` for the attached input (also
+  `waitFor(timecode)`, `positionAt(timestamp)` and `framesAt(timestamp)`
+  (the timecode at any instant, from a fit of the signal), `frameRate`,
+  `detectedRate`, `offsetFrames`, `lostAfter`, `closed`; `end` and `error` for the attached input (also
   through `events()`).
 - `LtcDecoder`: low-level `push()` returning decoded frames.
 - `Timecode` parsing, formatting, `compare` and frame arithmetic;

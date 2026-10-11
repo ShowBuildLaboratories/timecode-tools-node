@@ -22,6 +22,10 @@ function follow(rx: TimecodeReceiver) {
   const detected: '24' | '25' | '29.97df' | '30' | null = rx.detectedRate
   void rate
   void detected
+  const at: Timecode | null = rx.positionAt(performance.now())
+  const frames: number | null = rx.framesAt(performance.now())
+  void at
+  void frames
   return rx.waitFor('01:00:10:00')
 }
 

@@ -21,27 +21,51 @@
   "steps": [
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100021333,
+        "value": null
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100042666,
+        "value": null
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100064000,
+        "value": null
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100085333,
+        "value": null
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100106666,
+        "value": null
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100128000,
+        "value": null
+      }
     },
     {
       "frames": [
@@ -52,7 +76,11 @@
       ],
       "events": [
         "lock"
-      ]
+      ],
+      "frames_at": {
+        "t_us": 100149333,
+        "value": null
+      }
     },
     {
       "frames": [
@@ -61,11 +89,19 @@
           "ts_us": 100136688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100170666,
+        "value": null
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100192000,
+        "value": null
+      }
     },
     {
       "frames": [
@@ -74,11 +110,19 @@
           "ts_us": 100170021
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100213333,
+        "value": null
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100234666,
+        "value": null
+      }
     },
     {
       "frames": [
@@ -87,7 +131,11 @@
           "ts_us": 100203355
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100256000,
+        "value": null
+      }
     },
     {
       "frames": [
@@ -96,11 +144,19 @@
           "ts_us": 100236688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100277333,
+        "value": null
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100298666,
+        "value": null
+      }
     },
     {
       "frames": [
@@ -109,7 +165,11 @@
           "ts_us": 100270022
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100320000,
+        "value": 2591979.4993742094
+      }
     },
     {
       "frames": [
@@ -118,11 +178,19 @@
           "ts_us": 100303355
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100341333,
+        "value": 2591980.1393643674
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100362666,
+        "value": 2591980.779356494
+      }
     },
     {
       "frames": [
@@ -131,7 +199,11 @@
           "ts_us": 100336688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100384000,
+        "value": 2591981.419374195
+      }
     },
     {
       "frames": [
@@ -140,11 +212,19 @@
           "ts_us": 100370021
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100405333,
+        "value": 2591982.059364356
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100426666,
+        "value": 2591982.6993564847
+      }
     },
     {
       "frames": [
@@ -153,11 +233,19 @@
           "ts_us": 100403355
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100448000,
+        "value": 2591983.339374188
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100469333,
+        "value": 2591983.9793643504
+      }
     },
     {
       "frames": [
@@ -166,7 +254,11 @@
           "ts_us": 100436688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100490666,
+        "value": 2591984.6193564804
+      }
     },
     {
       "frames": [
@@ -175,11 +267,19 @@
           "ts_us": 100470022
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100512000,
+        "value": 2591985.259374184
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100533333,
+        "value": 2591985.8993643476
+      }
     },
     {
       "frames": [
@@ -188,7 +288,11 @@
           "ts_us": 100503354
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100554666,
+        "value": 2591986.539356478
+      }
     },
     {
       "frames": [
@@ -197,11 +301,19 @@
           "ts_us": 100536688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100576000,
+        "value": 2591987.179374182
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100597333,
+        "value": 2591987.819364346
+      }
     },
     {
       "frames": [
@@ -210,7 +322,11 @@
           "ts_us": 100570021
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100618666,
+        "value": 2591988.4593564766
+      }
     },
     {
       "frames": [
@@ -219,11 +335,19 @@
           "ts_us": 100603355
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100640000,
+        "value": 2591989.0993741816
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100661333,
+        "value": 2591989.739364345
+      }
     },
     {
       "frames": [
@@ -232,7 +356,11 @@
           "ts_us": 100636688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100682666,
+        "value": 2591990.379356476
+      }
     },
     {
       "frames": [
@@ -241,11 +369,19 @@
           "ts_us": 100670022
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100704000,
+        "value": 2591991.019374181
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100725333,
+        "value": 2591991.6593643446
+      }
     },
     {
       "frames": [
@@ -254,11 +390,19 @@
           "ts_us": 100703354
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100746666,
+        "value": 2591992.299356476
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100768000,
+        "value": 2591992.9393741805
+      }
     },
     {
       "frames": [
@@ -267,7 +411,11 @@
           "ts_us": 100736688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100789333,
+        "value": 2591993.5793643445
+      }
     },
     {
       "frames": [
@@ -276,11 +424,19 @@
           "ts_us": 100770021
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100810666,
+        "value": 2591994.2193564754
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100832000,
+        "value": 2591994.8593741804
+      }
     },
     {
       "frames": [
@@ -289,7 +445,11 @@
           "ts_us": 100803355
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100853333,
+        "value": 2591995.4993643444
+      }
     },
     {
       "frames": [
@@ -298,11 +458,19 @@
           "ts_us": 100836688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100874666,
+        "value": 2591996.1393564753
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100896000,
+        "value": 2591996.7793741804
+      }
     },
     {
       "frames": [
@@ -311,7 +479,11 @@
           "ts_us": 100870021
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100917333,
+        "value": 2591997.4193643443
+      }
     },
     {
       "frames": [
@@ -320,11 +492,19 @@
           "ts_us": 100903354
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100938666,
+        "value": 2591998.0593564757
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100960000,
+        "value": 2591998.6993741803
+      }
     },
     {
       "frames": [
@@ -333,11 +513,19 @@
           "ts_us": 100936688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 100981333,
+        "value": 2591999.3393643443
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101002666,
+        "value": 2591999.9793564756
+      }
     },
     {
       "frames": [
@@ -346,7 +534,11 @@
           "ts_us": 100970022
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101024000,
+        "value": 2592000.61937418
+      }
     },
     {
       "frames": [
@@ -355,11 +547,19 @@
           "ts_us": 101003355
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101045333,
+        "value": 2592001.259364344
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101066666,
+        "value": 2592001.8993564756
+      }
     },
     {
       "frames": [
@@ -368,7 +568,11 @@
           "ts_us": 101036688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101088000,
+        "value": 2592002.5393741806
+      }
     },
     {
       "frames": [
@@ -377,11 +581,19 @@
           "ts_us": 101070021
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101109333,
+        "value": 2592003.179364344
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101130666,
+        "value": 2592003.8193564755
+      }
     },
     {
       "frames": [
@@ -390,7 +602,11 @@
           "ts_us": 101103355
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101152000,
+        "value": 2592004.4593741805
+      }
     },
     {
       "frames": [
@@ -399,11 +615,19 @@
           "ts_us": 101136688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101173333,
+        "value": 2592005.0993643445
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101194666,
+        "value": 2592005.7393564754
+      }
     },
     {
       "frames": [
@@ -412,7 +636,11 @@
           "ts_us": 101170022
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101216000,
+        "value": 2592006.3793741805
+      }
     },
     {
       "frames": [
@@ -421,11 +649,19 @@
           "ts_us": 101203355
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101237333,
+        "value": 2592007.0193643444
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101258666,
+        "value": 2592007.6593564753
+      }
     },
     {
       "frames": [
@@ -434,11 +670,19 @@
           "ts_us": 101236688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101280000,
+        "value": 2592008.2993741804
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101301333,
+        "value": 2592008.9393643443
+      }
     },
     {
       "frames": [
@@ -447,7 +691,11 @@
           "ts_us": 101270021
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101322666,
+        "value": 2592009.5793564753
+      }
     },
     {
       "frames": [
@@ -456,11 +704,19 @@
           "ts_us": 101303355
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101344000,
+        "value": 2592010.2193741803
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101365333,
+        "value": 2592010.8593643443
+      }
     },
     {
       "frames": [
@@ -469,7 +725,11 @@
           "ts_us": 101336688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101386666,
+        "value": 2592011.4993564757
+      }
     },
     {
       "frames": [
@@ -478,11 +738,19 @@
           "ts_us": 101370022
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101408000,
+        "value": 2592012.13937418
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101429333,
+        "value": 2592012.779364344
+      }
     },
     {
       "frames": [
@@ -491,7 +759,11 @@
           "ts_us": 101403354
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101450666,
+        "value": 2592013.4193564756
+      }
     },
     {
       "frames": [
@@ -500,11 +772,19 @@
           "ts_us": 101436688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101472000,
+        "value": 2592014.05937418
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101493333,
+        "value": 2592014.699364344
+      }
     },
     {
       "frames": [
@@ -513,11 +793,19 @@
           "ts_us": 101470021
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101514666,
+        "value": 2592015.3393564755
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101536000,
+        "value": 2592015.9793741805
+      }
     },
     {
       "frames": [
@@ -526,7 +814,11 @@
           "ts_us": 101503355
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101557333,
+        "value": 2592016.6193643445
+      }
     },
     {
       "frames": [
@@ -535,11 +827,19 @@
           "ts_us": 101536688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101578666,
+        "value": 2592017.2593564754
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101600000,
+        "value": 2592017.8993741805
+      }
     },
     {
       "frames": [
@@ -548,7 +848,11 @@
           "ts_us": 101570021
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101621333,
+        "value": 2592018.5393643444
+      }
     },
     {
       "frames": [
@@ -557,11 +861,19 @@
           "ts_us": 101603354
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101642666,
+        "value": 2592019.1793564754
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101664000,
+        "value": 2592019.8193741804
+      }
     },
     {
       "frames": [
@@ -570,7 +882,11 @@
           "ts_us": 101636688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101685333,
+        "value": 2592020.4593643444
+      }
     },
     {
       "frames": [
@@ -579,11 +895,19 @@
           "ts_us": 101670021
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101706666,
+        "value": 2592021.0993564753
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101728000,
+        "value": 2592021.7393741803
+      }
     },
     {
       "frames": [
@@ -592,7 +916,11 @@
           "ts_us": 101703355
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101749333,
+        "value": 2592022.3793643443
+      }
     },
     {
       "frames": [
@@ -601,11 +929,19 @@
           "ts_us": 101736688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101770666,
+        "value": 2592023.0193564757
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101792000,
+        "value": 2592023.6593741802
+      }
     },
     {
       "frames": [
@@ -614,11 +950,19 @@
           "ts_us": 101770021
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101813333,
+        "value": 2592024.299364344
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101834666,
+        "value": 2592024.9393564756
+      }
     },
     {
       "frames": [
@@ -627,7 +971,11 @@
           "ts_us": 101803355
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101856000,
+        "value": 2592025.57937418
+      }
     },
     {
       "frames": [
@@ -636,11 +984,19 @@
           "ts_us": 101836688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101877333,
+        "value": 2592026.219364344
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101898666,
+        "value": 2592026.8593564755
+      }
     },
     {
       "frames": [
@@ -649,7 +1005,11 @@
           "ts_us": 101870022
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101920000,
+        "value": 2592027.4993741806
+      }
     },
     {
       "frames": [
@@ -658,11 +1018,19 @@
           "ts_us": 101903355
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101941333,
+        "value": 2592028.139364344
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101962666,
+        "value": 2592028.7793564755
+      }
     },
     {
       "frames": [
@@ -671,7 +1039,11 @@
           "ts_us": 101936688
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 101984000,
+        "value": 2592029.4193741805
+      }
     },
     {
       "frames": [
@@ -680,11 +1052,19 @@
           "ts_us": 101970021
         }
       ],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 102005333,
+        "value": 2592030.0593643445
+      }
     },
     {
       "frames": [],
-      "events": []
+      "events": [],
+      "frames_at": {
+        "t_us": 102006666,
+        "value": 2592030.0993564753
+      }
     }
   ],
   "wait_for": {
