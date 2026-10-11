@@ -99,7 +99,7 @@ jobs:
       matrix:
         include:
           - { name: macOS arm64, host: macos-14 }
-          - { name: macOS x64, host: macos-13 }
+          - { name: macOS x64, host: macos-15-intel }
           - { name: Windows x64, host: windows-latest }
           - { name: Windows arm64, host: windows-11-arm }
           - { name: Linux x64 glibc, host: ubuntu-latest }

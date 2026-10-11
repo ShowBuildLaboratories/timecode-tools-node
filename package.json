@@ -63,7 +63,7 @@
   "scripts": {
     "build": "napi build --platform --release --output-dir prebuilds --no-js --dts ../native.d.ts",
     "build:debug": "napi build --platform --output-dir prebuilds --no-js --dts ../native.d.ts",
-    "test": "node --test __test__/*.test.js",
+    "test": "node scripts/test.js",
     "typecheck": "tsc --noEmit -p __test__/tsconfig.json",
     "goldens:sync": "node scripts/goldens.js sync",
     "goldens:check": "node scripts/goldens.js check",
