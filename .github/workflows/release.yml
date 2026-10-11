@@ -58,6 +58,7 @@ jobs:
       # Keep files byte for byte (goldens/ is compared with the core's copy).
       - run: git config --global core.autocrlf false
         if: runner.os == 'Windows'
+        working-directory: .
       - uses: actions/checkout@v4
         with:
           path: timecode-tools-node
@@ -110,6 +111,7 @@ jobs:
       # Keep files byte for byte (goldens/ is compared with the core's copy).
       - run: git config --global core.autocrlf false
         if: runner.os == 'Windows'
+        working-directory: .
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         if: ${{ !matrix.container }}
@@ -130,6 +132,7 @@ jobs:
       # Keep files byte for byte (goldens/ is compared with the core's copy).
       - run: git config --global core.autocrlf false
         if: runner.os == 'Windows'
+        working-directory: .
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:

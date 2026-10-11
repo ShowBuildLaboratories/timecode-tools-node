@@ -7,7 +7,8 @@ which lives in its own repository together with the shared golden files.
 
 ## Building
 
-You need Rust (1.88 or later) and Node.js 18 or later.
+You need Rust (1.88 or later) and Node.js 20 or later to build (the
+package itself runs on Node.js 18 or later).
 
 While the Rust crate is not yet on crates.io, `Cargo.toml` uses it from a
 checkout of the core repository **next to this one**:

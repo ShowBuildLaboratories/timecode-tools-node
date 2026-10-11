@@ -30,6 +30,7 @@ jobs:
       # Keep files byte for byte (goldens/ is compared with the core's copy).
       - run: git config --global core.autocrlf false
         if: runner.os == 'Windows'
+        working-directory: .
       - uses: actions/checkout@v4
         with:
           path: timecode-tools-node
@@ -42,11 +43,18 @@ jobs:
       - uses: Swatinem/rust-cache@v2
         with:
           workspaces: timecode-tools-node
+      # The build tool (@napi-rs/cli) needs Node 20 or later; the package
+      # itself is then tested on each Node version.
       - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 22
       - run: npm ci
       - run: npm run build
+      - uses: actions/setup-node@v4
+        if: matrix.node != 22
+        with:
+          node-version: ${{ matrix.node }}
+      - run: node --version
       - run: npm test
       - run: npm run goldens:check -- --require-core
       - run: npm run typecheck
