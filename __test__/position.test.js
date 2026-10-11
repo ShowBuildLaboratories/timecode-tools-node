@@ -29,14 +29,15 @@ test('LTC: positionAt matches the frame timestamps', () => {
   const last = frames.at(-1)
   const f = rx.framesAt(last.timestamp)
   assert.ok(Math.abs(f - last.frameIndex()) <= 0.25, `${f} vs ${last.frameIndex()}`)
-  // 1 us into the frame: the core reads timestamps in whole microseconds,
-  // so exactly at a frame's own (sub-microsecond) timestamp the fit can
-  // still be a hair before that frame.
-  const at = rx.positionAt(last.timestamp + 0.001)
+  // Exactly at the frame's own timestamp (which has a sub-microsecond part
+  // here), positionAt gives that frame.
+  const at = rx.positionAt(last.timestamp)
   assert.ok(at instanceof Timecode)
   assert.equal(String(at), String(last))
   assert.equal(at.frameRate, FrameRate.Fps25)
-  assert.equal(at.timestamp, last.timestamp + 0.001)
+  assert.equal(at.timestamp, last.timestamp)
+  // Every frame once the fit has settled, each at its exact timestamp.
+  for (const tc of frames.slice(10)) assert.equal(String(rx.positionAt(tc.timestamp)), String(tc))
   // Half a frame later: still the same frame. 10 frames later: extrapolated.
   assert.equal(String(rx.positionAt(last.timestamp + 20)), String(last))
   assert.ok(Math.abs(rx.framesAt(last.timestamp + 400) - (last.frameIndex() + 10)) <= 0.25)
@@ -52,7 +53,7 @@ test('LTC: framesAt is not wrapped at midnight; positionAt is', () => {
   const day = Timecode.fromFrameIndex(-1, FrameRate.Fps30).frameIndex() + 1
   const f = rx.framesAt(last.timestamp)
   assert.ok(Math.abs(f - (day + last.frameIndex())) <= 0.25, `${f}`)
-  assert.equal(String(rx.positionAt(last.timestamp + 0.001)), String(last))
+  assert.equal(String(rx.positionAt(last.timestamp)), String(last))
   rx.close()
 })
 
@@ -97,7 +98,7 @@ test('MTC: positionAt after lock', () => {
   }
   assert.equal(rx.locked, true)
   const last = frames.at(-1)
-  assert.equal(String(rx.positionAt(last.timestamp + 0.001)), String(last))
+  assert.equal(String(rx.positionAt(last.timestamp)), String(last))
   assert.ok(Math.abs(rx.framesAt(last.timestamp) - last.frameIndex()) <= 0.25)
   rx.close()
 })
