@@ -8,8 +8,9 @@
 # Before the first release:
 #   - Create the "release" environment (Settings > Environments) with
 #     required reviewers, so the publish job waits for approval.
-#   - Add the NPM_TOKEN secret to that environment (an npm automation token),
-#     or set up npm trusted publishing for this workflow and drop the token.
+#   - Publishing uses npm trusted publishing (OIDC), not a token: on
+#     npmjs.com, the package's Trusted Publisher must be this repository,
+#     workflow file release.yml and environment "release".
 name: Release
 
 on:
@@ -152,15 +153,20 @@ jobs:
     environment: release # waits for a manual approval
     permissions:
       contents: read
-      id-token: write # npm provenance
+      id-token: write # npm trusted publishing (OIDC) and provenance
     steps:
+      # Trusted publishing needs npm 11.5.1 or later; Node 24 ships with it.
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           registry-url: https://registry.npmjs.org
+      - name: Check the npm version
+        run: |
+          npm --version
+          node -e "const [a,b,c]=process.argv[1].split('.').map(Number); process.exit(a>11||(a===11&&(b>5||(b===5&&c>=1)))?0:1)" "$(npm --version)"
       - uses: actions/download-artifact@v4
         with:
           name: npm-package
-      - run: npm publish timecode-tools-*.tgz --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # No token: npm authenticates with the workflow's OIDC identity and
+      # adds provenance automatically (public repository).
+      - run: npm publish timecode-tools-*.tgz --access public

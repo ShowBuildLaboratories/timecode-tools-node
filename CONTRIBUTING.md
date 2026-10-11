@@ -88,7 +88,8 @@ The npm package version follows the Rust crate's version.
    binaries, tests them on 7 platforms, checks that all 9 are present, packs
    one package with all of them in `prebuilds/` (the `npm-package`
    artifact), and then waits for approval on the `release` environment
-   before `npm publish`.
+   before `npm publish`. Publishing uses npm trusted publishing (no token);
+   provenance is added automatically.
 4. Optionally download the `npm-package` artifact and try it (for example
    in a Companion module) before approving.
 
